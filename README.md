@@ -25,58 +25,30 @@ All cards, the table, and the chart follow the status filter. Clearing the filte
 | `.streamlit/config.toml` | Turns off Streamlit usage statistics, restricts the server to this computer, and sets the dashboard colors. |
 | `test_dashboard.py` | Checks the sample calculations, status rules, dashboard filters, and empty selection automatically. |
 
-## Run the prepared project on this computer
 
-A private Python runtime has been placed in `.tools/python` and a project environment in `.venv`, because the system Python shortcuts did not work. You do not need a system Python installation for this prepared copy. The `.tools`, `.venv`, and `.cache` folders are local setup files and are ignored by Git. Keep `.tools/python` in place because this environment uses it.
 
-```powershell
-Set-Location -LiteralPath 'C:\Users\User\Desktop\ShipmentTracker-Portfolio'
-.\.venv\Scripts\python.exe -m streamlit run app.py
+## How to run this project
+
+1. Install Python 3.11 or newer.
+2. Download or clone this repository.
+3. Open a terminal in the project folder.
+4. Install the required packages:
+
+```bash
+python -m pip install -r requirements.txt
 ```
 
-Open **http://127.0.0.1:8501**. Press **Ctrl+C** in PowerShell to stop the dashboard.
+5. Start the dashboard:
 
-## First-time setup in PowerShell
-
-Use this section only for a fresh copy on another computer, or to rebuild the environment with your own Python installation. Virtual environments are computer-specific; share the source files, not `.venv` or `.tools`.
-
-You need Python 3.11 or newer (Python 3.12 or 3.13 recommended). Check whether it is already installed:
-
-```powershell
-python --version
+```bash
+python -m streamlit run app.py
 ```
 
-If Windows reports that Python cannot be found or opens the Microsoft Store, install Python from <https://www.python.org/downloads/windows/> and enable **Add python.exe to PATH** in the installer. Installing Python changes your computer outside this project; this project does not install it for you. Open a new PowerShell window afterwards.
+6. Open http://localhost:8501 in your browser.
 
-Run these commands one at a time:
+This project uses fictional shipment data and requires no API keys or external accounts.
 
-```powershell
-Set-Location -LiteralPath 'C:\Users\User\Desktop\ShipmentTracker-Portfolio'
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --no-cache-dir -r requirements.txt
-.\.venv\Scripts\python.exe -m streamlit run app.py
-```
 
-The virtual environment (`.venv`) is a private folder of Python packages for this project. These commands do not activate it, so you do not need to change PowerShell's script execution policy. The first package installation needs an internet connection but requires no account or payment. Once packages are installed, the dashboard runs locally without internet access or external accounts.
-
-Open **http://127.0.0.1:8501** in your browser. Keep PowerShell open while using the dashboard. Press **Ctrl+C** in that PowerShell window to stop it.
-
-If `python` is unavailable but `py --version` works, use `py -3 -m venv .venv` for the environment-creation command. The remaining `.venv` commands stay the same.
-
-## Run it again later
-
-```powershell
-Set-Location -LiteralPath 'C:\Users\User\Desktop\ShipmentTracker-Portfolio'
-.\.venv\Scripts\python.exe -m streamlit run app.py
-```
-
-If port 8501 is already in use, run:
-
-```powershell
-.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8502
-```
-
-Then open **http://127.0.0.1:8502**.
 
 ## Business rules and expected results
 
