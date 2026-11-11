@@ -4,6 +4,14 @@
 
 A beginner-friendly supply chain dashboard built with Python, Streamlit, and pandas. It runs on your computer and reads 20 invented shipments from a local CSV file. All carriers and shipment IDs are fictional; city names are illustrative. There is no real company information.
 
+## Dashboard Preview
+
+### Shipment Overview
+![Shipment Tracking Dashboard](dashboard-overview.png)
+
+### Delivery Performance
+![Delivery Performance Dashboard](delivery-performance.png)
+
 ## What you can do
 
 - See total, delivered, in-transit, and delayed shipment counts.
