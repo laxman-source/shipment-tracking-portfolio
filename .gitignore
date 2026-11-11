@@ -1,0 +1,21 @@
+# Local Python environment and optional project-local tooling
+.venv/
+.tools/
+.cache/
+
+# Generated Python files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local settings, secrets, and editor files
+.env
+.env.*
+.streamlit/secrets.toml
+.vscode/
+.idea/
+
+# Temporary logs and operating system files
+*.log
+Thumbs.db
+.DS_Store
